@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODE7 Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="directory" class="directory" aria-hidden="true">
+        <div class="screen-texture" aria-hidden="true"></div>
+        <div class="screen-vignette" aria-hidden="true"></div>
+
+        <header class="topbar">
+            <section class="title-group">
+                <div class="date-line">
+                    <span id="dateText">Wednesday</span>
+                    <span class="divider">|</span>
+                    <span id="timeText">4:50 AM</span>
+                </div>
+                <h1 id="directoryTitle">DIRECTORY</h1>
+                <p id="directorySubtitle">NODE7 SERVER GUIDE</p>
+            </section>
+
+            <section class="player-ledger" aria-label="Character summary">
+                <div class="identity-block">
+                    <span class="ledger-label">CHARACTER</span>
+                    <strong id="playerName">Unknown</strong>
+                    <small id="playerJob">Civilian · Freelancer</small>
+                </div>
+                <div class="currency-block">
+                    <span class="currency bank"><i></i><b id="bankAmount">0</b></span>
+                    <span class="currency gold"><i></i><b id="goldAmount">0.00</b></span>
+                    <span class="currency cash">$<b id="cashAmount">0.00</b></span>
+                </div>
+            </section>
+        </header>
+
+        <nav class="section-strip" aria-label="Directory sections">
+            <div id="categoryList" class="category-list"></div>
+            <div class="section-count">
+                <span id="categoryIndex">01</span>
+                <i></i>
+                <span id="categoryTotal">01</span>
+            </div>
+        </nav>
+
+        <section class="content-frame">
+            <aside class="listing-panel">
+                <header class="listing-heading">
+                    <div>
+                        <small>DIRECTORY SECTION</small>
+                        <h2 id="categoryLabel">Featured</h2>
+                    </div>
+                    <span id="entryCount" class="entry-count">0 RECORDS</span>
+                </header>
+
+                <div class="list-rule"></div>
+                <div id="entryList" class="entry-list" role="listbox"></div>
+                <div class="list-fade" aria-hidden="true"></div>
+            </aside>
+
+            <article class="detail-panel">
+                <section id="detailArt" class="detail-art" data-category="featured" aria-hidden="true">
+                    <div class="art-clouds"></div>
+                    <div class="art-rays"></div>
+                    <div class="art-horizon"></div>
+                    <div class="art-emblem">
+                        <span id="entryMonogram">N7</span>
+                        <small id="entryRecord">DIRECTORY RECORD</small>
+                    </div>
+                    <div class="art-caption">
+                        <span id="entryKicker">NODE7 DIRECTORY</span>
+                        <strong id="entryLocation">NODE7</strong>
+                    </div>
+                </section>
+
+                <section class="detail-copy">
+                    <div class="detail-topline">
+                        <span id="detailSection">FEATURED</span>
+                        <span id="detailPosition">01 / 01</span>
+                    </div>
+                    <h2 id="entryTitle">Select a directory entry</h2>
+                    <p id="entryDescription">Browse server services, public work, travel points, and guidance.</p>
+
+                    <div class="record-rule"><span></span></div>
+                    <ul id="entryDetails" class="detail-list"></ul>
+                    <div id="actionList" class="action-list"></div>
+                </section>
+            </article>
+        </section>
+
+        <footer class="bottombar">
+            <span id="footerBrand" class="footer-brand">NODE7 DEVELOPMENT STUDIOS</span>
+            <div class="prompts">
+                <span><kbd>←</kbd><kbd>→</kbd> SECTION</span>
+                <span><kbd>↑</kbd><kbd>↓</kbd> SELECT</span>
+                <span><kbd>ENTER</kbd> USE</span>
+                <span><kbd>R</kbd> ROUTE</span>
+                <span>BACK <kbd>PAGE UP</kbd></span>
+            </div>
+        </footer>
+    </main>
+
+    <audio id="soundOpen" preload="auto" src="sounds/open.ogg"></audio>
+    <audio id="soundMove" preload="auto" src="sounds/move.ogg"></audio>
+    <audio id="soundCategoryLeft" preload="auto" src="sounds/category-left.ogg"></audio>
+    <audio id="soundCategoryRight" preload="auto" src="sounds/category-right.ogg"></audio>
+    <audio id="soundSelect" preload="auto" src="sounds/select.ogg"></audio>
+    <audio id="soundClose" preload="auto" src="sounds/close.ogg"></audio>
+    <script src="app.js"></script>
+</body>
+</html>

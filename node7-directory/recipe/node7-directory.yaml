@@ -1,0 +1,14 @@
+$engine: 3
+$onesync: on
+name: NODE7 Directory
+author: NODE7 Development Studios
+description: Native-inspired RedM server guide and directory.
+tasks:
+  - action: download_github
+    src: https://github.com/NODE7-Development-Studios/node7-directory
+    ref: main
+    dest: ./resources/[node7]/node7-directory
+  - action: append_content
+    file: ./server.cfg
+    content: |
+      ensure node7-directory
